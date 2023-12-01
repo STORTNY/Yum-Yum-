@@ -44,13 +44,35 @@ while true; do
           echo "uh sir, I'm afraid we dont have that."
         fi
         ;;
-      3)
-        echo "What do you want to add?:  "
-        echo''
-        read add
-        echo "$add" >> food.txt
-        echo "Added: $add"
-        ;;
+    3)
+      echo "What do you want to add?  "
+      echo ''
+    
+      while true; do
+        echo "drink or food? [d/f]: "
+        read df
+    
+        case $df in
+          [fF]|[food])
+            echo "Enter the food you wanna  add: "
+            read food
+            echo "$food" >> food.txt
+            echo " $food added "
+            break
+            ;;
+          [dD]|[drink])
+            echo "Enter the drink you wanna add: "
+            read drink
+            echo "$drink" >> drinks.txt
+            echo " $drink added "
+            break
+            ;;
+          *)
+            echo "bro, it's really not that hard, f for food, d for drinks . Again.."
+            ;;
+        esac
+      done
+      ;;
       4)
         echo "What do you want to delete?"
         echo''
