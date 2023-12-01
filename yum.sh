@@ -2,7 +2,7 @@
 # fama figlet?
 if command -v figlet &> /dev/null; then
     
-    figlet -f big "~Yum Yum~"
+    figlet -w 200 -f standard "~Yum Yum~"
     echo "Hi! Can't decide what to drink or eat today? Well, I am here to help you out!"
 else
     # Fammech figlet
